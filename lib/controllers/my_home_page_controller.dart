@@ -8,6 +8,7 @@ class MyHomePageController extends GetxController {
   getData() async {
     final client = GetConnect();
     final response = await client.get(url);
+
     result = NumberTrivia.fromJson(response.body);
     update();
   }
